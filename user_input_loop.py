@@ -1,9 +1,12 @@
+userInputtedNumbers = []
+count = 0
+total = 0
+
 def input_number():
     while True:
         try:
             x = input("Enter a number or press Enter to quit: ")
             if x == "":
-                x = float(0.0)
                 return x
             else:
                 x = float(x)
@@ -11,13 +14,23 @@ def input_number():
         except ValueError:
             print("ERROR: Please enter a real number or press Enter to quit.")
 
-num1 = input_number()
-num2 = input_number()
-num3 = input_number()
-num4 = input_number()
+while True:
+    userInput = input_number()
+    if userInput == '':
+        break
+    else:
+        userInputtedNumbers.append(userInput)
+        count += 1
 
-sum = num1 + num2 + num3 + num4
-average = sum / 4
+for num in userInputtedNumbers:
+    total += num
 
-print("The sum is", + sum)
-print("The average is", + average)
+if count == 0:
+    print("No numbers entered.")
+    input("Press enter to exit.")
+    exit
+else:
+    average = total / count
+    print("The sum is", + total)
+    print("The average is", + average)
+
