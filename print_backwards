@@ -1,0 +1,7 @@
+myString = "text from myString"
+reversedString  = ""
+
+for ch in myString:
+    reversedString = ch + reversedString
+
+print(reversedString)
