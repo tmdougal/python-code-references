@@ -1,0 +1,14 @@
+outputLinesList = []
+userInputFile = input("enter the input file name: ")
+userOutputFile = input("enter the output file name: ")
+counter = 0
+
+with open (userInputFile, "r") as inputFile:
+    for line in inputFile:
+        counter += 1
+        line = f"{counter:4}> " + line
+        outputLinesList.append(line)
+
+with open (userOutputFile, "w")  as outputFile:
+    for line in outputLinesList:
+        outputFile.write(line)
