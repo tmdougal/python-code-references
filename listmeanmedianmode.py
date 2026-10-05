@@ -6,12 +6,12 @@ def if_empty(list):
     else:
         pass
 
-def mean(list): #done
+def mean(list):
     if_empty(list)
     funcListMean = sum(list) / len(list)
     return funcListMean
 
-def median(list): #done
+def median(list):
     if_empty(list)
     funcListMiddlePosition = len(list) // 2
     funcListMedian = list[funcListMiddlePosition]
